@@ -1,5 +1,11 @@
-import type { AppProps } from 'next/app'
+import "../styles/index.scss";
+import type { AppProps } from "next/app";
+import { ElementOffsetProvider } from "../context/ElementOffsetContext";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ElementOffsetProvider>
+      <Component {...pageProps} />
+    </ElementOffsetProvider>
+  );
 }
