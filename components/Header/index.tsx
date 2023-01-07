@@ -8,7 +8,7 @@ export default function Header() {
 
   useLayoutEffect(() => {
     homeRef.current && setHomeOffset(homeRef.current.offsetTop)
-  }, [])
+  }, [setHomeOffset])
 
   return <header className={classes.header}>
     <h1 ref={homeRef} className={classes.title}>

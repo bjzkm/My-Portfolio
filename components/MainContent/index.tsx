@@ -11,7 +11,7 @@ export default function MainContent() {
 
   useLayoutEffect(() => {
     mainRef.current && setMainContainer({ secondary : mainRef.current })
-  }, [])
+  }, [setMainContainer])
 
   return (
     <main ref={mainRef} className={classes.mainContent}>

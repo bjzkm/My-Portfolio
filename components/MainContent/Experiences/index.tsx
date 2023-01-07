@@ -8,7 +8,7 @@ export default function Experiences() {
 
   useLayoutEffect(() => {
     experiencesRef.current && setExperiencesOffset(experiencesRef.current.offsetTop)
-  }, [])
+  }, [setExperiencesOffset])
 
   return (
     <section ref={experiencesRef} className={classes.experiences}>

@@ -8,7 +8,7 @@ export default function AboutMe() {
 
   useLayoutEffect(() => {
     aboutMeRef.current && setAboutMeOffset(aboutMeRef.current.offsetTop)
-  }, [])
+  }, [setAboutMeOffset])
   
   return (
     <section ref={aboutMeRef} className={classes.aboutMe}>

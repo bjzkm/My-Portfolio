@@ -8,7 +8,7 @@ export default function Skills() {
 
   useLayoutEffect(() => {
     skillsRef.current && setSkillsOffset(skillsRef.current.offsetTop)
-  }, [])
+  }, [setSkillsOffset])
 
   return (
     <section ref={skillsRef} className={classes.skills}>
