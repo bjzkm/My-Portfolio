@@ -1,0 +1,19 @@
+.sidebarFooter {
+  height: 106px;
+  background-color: #FAE8E8;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
