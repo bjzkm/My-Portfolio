@@ -14,9 +14,9 @@ export default function Skills() {
     <section ref={skillsRef} className={classes.skills}>
       <h3 className={classes.title}>Skills</h3>
       <p className={classes.descriptions}>
-        Wasn't sure what the best way to present my skill-set was as I didn't
+        Wasn&apos;t sure what the best way to present my skill-set was as I didn&apos;t
         want to list a bunch of buzz words here. <br />
-        So I will just list some of the tools and frameworks I'm currently
+        So I will just list some of the tools and frameworks I&apos;m currently
         using:
       </p>
 

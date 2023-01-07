@@ -24,7 +24,7 @@ export default function Experiences() {
           <div className={classes.experienceDetails}>
             <h2 className={classes.experienceTitle}>
               Full Stack Web Developer at 
-              <a href="https://proptexx.com" target="_blank"> Proptexx  </a> 
+              <a href="https://proptexx.com" target="_blank" rel="noreferrer"> Proptexx  </a> 
               ( 2021 - 2022 )
             </h2>
 
@@ -40,7 +40,7 @@ export default function Experiences() {
           <div className={classes.experienceDetails}>
             <h2 className={classes.experienceTitle}>
               Full Stack Developer at 
-              <a href="https://bilions.org" target="_blank"> Bilions </a> 
+              <a href="https://bilions.org" target="_blank" rel="noreferrer"> Bilions </a> 
               ( 2022 )
             </h2>
 
@@ -56,7 +56,7 @@ export default function Experiences() {
           <div className={classes.experienceDetails}>
             <h2 className={classes.experienceTitle}>
               Full Stack Web Developer at 
-              <a href="https://www.befeni.de" target="_blank"> Befeni GmbH </a> 
+              <a href="https://www.befeni.de" target="_blank" rel="noreferrer"> Befeni GmbH </a> 
               ( 2022 - present )
             </h2>
 
