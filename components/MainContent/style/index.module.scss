@@ -1,0 +1,10 @@
+.mainContent {
+  flex: 1;
+  background-color: #f4f9fa;
+  padding: 30px 45px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}

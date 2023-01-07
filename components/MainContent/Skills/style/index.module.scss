@@ -1,0 +1,61 @@
+.skills {
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .descriptions {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .skillList {
+    margin-left: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    
+    .skill {
+      display: flex;
+      flex-direction: column;
+
+      .skillTitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+
+      .progressBar {
+        position: relative;
+        height: 15px;
+        width: 400px;
+        border-radius: 30px;
+        background-color: #efeaea;
+
+        .progress {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          height: 15px;
+          width: 0%;
+          border-radius: 30px;
+          background-color: #e36e1a;
+        }
+
+        .percentage {
+          position: absolute;
+          top: -25px;
+          left: 95%;
+          margin-left: -30px;
+          font-size: 16px;
+          color: #e36e1a;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
