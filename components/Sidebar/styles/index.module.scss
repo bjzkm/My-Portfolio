@@ -26,6 +26,7 @@
     }
 
     .info {
+      text-align: center;
       margin-top: 10px;
       font-size: 18px;
       font-weight: 600;
@@ -70,6 +71,40 @@
     .toggleMenu {
       display: none;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 280px;
+
+    .profile {
+      .avatar {
+        width: 220px;
+        height: 220px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .title {
+        margin-top: 15px;
+      }
+  
+      .info {
+        margin-top: 5px;
+      }
+    }
+
+    .navigationListWrapper {
+      .navigationList {
+        height: calc(100vh - (70px + 343px + 45px));
+        justify-content: center;
+      }
+    }
+
   }
 }
 

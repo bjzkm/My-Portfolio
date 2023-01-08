@@ -60,6 +60,31 @@
   }
 }
 
+@media (max-width: 900px) {
+  .skills {
+    .skillList {
+      column-gap: 20px;
+      row-gap: 30px;
+      .skill {
+        width: calc((100% / 2) - (20px / 2));
+
+        .skillTitle {
+          font-size: 14px;
+        }
+  
+        .progressBar {
+          height: 14px;
+  
+          .percentage {
+            font-size: 14px;
+            left: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 550px) {
   .skills {
     .title {
@@ -81,19 +106,6 @@
 
       .skill {
         width: calc((100% / 2) - (15px / 2));
-
-        .skillTitle {
-          font-size: 14px;
-        }
-  
-        .progressBar {
-          height: 10px;
-  
-          .percentage {
-            font-size: 14px;
-            left: 100% !important;
-          }
-        }
       }
     }
   }

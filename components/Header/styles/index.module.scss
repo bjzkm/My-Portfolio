@@ -79,6 +79,19 @@
   }
 }
 
+@media (max-width: 900px) {
+  .header {
+    .title {
+      font-size: 65px;
+    }
+
+    .actionButtons {
+      align-self: flex-start;
+    }
+  }
+
+}
+
 @media (max-width: 550px) {
   .header {
     display: none;
