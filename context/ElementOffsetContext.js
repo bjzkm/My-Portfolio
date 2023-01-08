@@ -48,9 +48,16 @@ export function ElementOffsetProvider(props) {
   };
 
   function scrollToOffset(offset, containerType = "main") {
-    if (containers[containerType]) {
-      containers[containerType].scrollTo({
-        top: offset - containers[containerType].offsetTop - 25,
+    if(window.innerWidth > 550) {
+      if (containers[containerType]) {
+        containers[containerType].scrollTo({
+          top: offset - containers[containerType].offsetTop - 25,
+          behavior: "smooth",
+        });
+      }  
+    } else {
+      window.scrollTo({
+        top: offset - 80,
         behavior: "smooth",
       });
     }
@@ -73,46 +80,70 @@ export function ElementOffsetProvider(props) {
   }
 
   useEffect(() => {
-    if(containers["main"]) {
-      containers["main"].addEventListener("scroll", () => {
-
-        if(containers["main"].scrollTop === 0) {
-          setActiveElement("home")
-        } else {
-
-          if (containers["secondary"]) {
-            function setActive() {
-              let result = getNearest(
-                [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset],
-                containers["secondary"].scrollTop +
-                  containers["secondary"].offsetTop +
-                  25
-              );
-      
-              switch (result) {
-                case aboutMeOffset:
-                  setActiveElement("aboutMe");
-                  break;
-                case skillsOffset:
-                  setActiveElement("skills");
-                  break;
-                case experiencesOffset:
-                  setActiveElement("experiences");
-                  break;
-                default:
-                  setActiveElement("home");
-                  break;
+    if(window.innerWidth > 550) {
+      if(containers["main"]) {
+        containers["main"].addEventListener("scroll", () => {
+  
+          if(containers["main"].scrollTop === 0) {
+            setActiveElement("home")
+          } else {
+  
+            if (containers["secondary"]) {
+              function setActive() {
+                let result = getNearest(
+                  [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset],
+                  containers["secondary"].scrollTop +
+                    containers["secondary"].offsetTop +
+                    25
+                );
+        
+                switch (result) {
+                  case aboutMeOffset:
+                    setActiveElement("aboutMe");
+                    break;
+                  case skillsOffset:
+                    setActiveElement("skills");
+                    break;
+                  case experiencesOffset:
+                    setActiveElement("experiences");
+                    break;
+                  default:
+                    setActiveElement("home");
+                    break;
+                }
               }
+        
+              setActive();
+              containers["secondary"].addEventListener("scroll", setActive);
             }
-      
-            setActive();
-            containers["secondary"].addEventListener("scroll", setActive);
           }
+        });
+      }
+    } else {
+      function setActive() {
+        let result = getNearest(
+          [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset],window.scrollY
+        );
+
+        switch (result) {
+          case aboutMeOffset:
+            setActiveElement("aboutMe");
+            break;
+          case skillsOffset:
+            setActiveElement("skills");
+            break;
+          case experiencesOffset:
+            setActiveElement("experiences");
+            break;
+          default:
+            setActiveElement("home");
+            break;
         }
-      });
+      }
+
+      setActive();
+      window.addEventListener("scroll", setActive);
     }
-
-
 
   }, [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset]);
 
