@@ -25,7 +25,6 @@
 
   .actionButtons {
     display: flex;
-    gap: 20px;
     align-self: flex-end;
 
     .contactMeButton,
@@ -48,6 +47,7 @@
 
     .contactMeButton {
       background-color: #e6e4e5;
+      margin-left: 20px;
     }
 
     .downloadCvButton {

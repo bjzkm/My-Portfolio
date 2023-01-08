@@ -1,4 +1,6 @@
 .skills {
+  margin-top: 40px;
+  
   .title {
     font-size: 20px;
     font-weight: 700;
@@ -16,12 +18,19 @@
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
     
     .skill {
       display: flex;
       flex-direction: column;
       width: calc((100% / 2) - (50px / 2));
+
+      &:not(:nth-child(1), :nth-child(2)) {
+        margin-top: 50px
+      }
+
+      &:nth-child(odd) {
+        margin-right: 50px;
+      }
 
       .skillTitle {
         font-size: 16px;
@@ -63,10 +72,17 @@
 @media (max-width: 900px) {
   .skills {
     .skillList {
-      column-gap: 20px;
-      row-gap: 30px;
+
       .skill {
         width: calc((100% / 2) - (20px / 2));
+
+        &:not(:nth-child(1), :nth-child(2)) {
+          margin-top: 30px
+        }
+  
+        &:nth-child(odd) {
+          margin-right: 20px;
+        }
 
         .skillTitle {
           font-size: 14px;
@@ -101,11 +117,14 @@
 
     .skillList {
       margin-left: 0;
-      column-gap: 15px;
-      row-gap: 30px;
 
       .skill {
         width: calc((100% / 2) - (15px / 2));
+  
+        &:nth-child(odd) {
+          margin-right: 15px;
+        }
+
       }
     }
   }
