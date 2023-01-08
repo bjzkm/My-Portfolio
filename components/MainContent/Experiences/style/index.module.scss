@@ -99,3 +99,56 @@
     }
   }
 }
+
+
+@media (max-width: 550px) {
+  .experiences {
+    .experienceList {
+      position: static;
+      gap: 15px;
+
+      .title {
+        text-align: center;
+      }
+
+      .experience {
+        gap: 15px;
+        margin-left: 0;
+
+        .experienceIcon {
+          border-width: 3px;
+          height: 35px;
+          width: 35px;
+          padding: 4px;
+        }
+
+        .experienceDetails {
+          padding: 8px 15px;
+          .experienceTitle {
+            font-size: 16px;
+          }
+
+          .experienceDescriptions {
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 18px;
+
+            a {
+              font-weight: 500;
+            }
+          }
+
+          &::before {
+            border-width: 8px 12px 8px 0;
+            left: -10px;
+            top: 9px;
+          }
+        }
+      }
+    }
+
+    .experienceJourney {
+      display: none
+    }
+  }
+}

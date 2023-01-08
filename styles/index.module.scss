@@ -1,0 +1,22 @@
+.body {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow: scroll;
+  flex-wrap: wrap;
+
+  .container {
+    display: flex;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 550px) {
+  .body {
+    height: auto;
+    overflow: unset;
+
+    .container {
+      flex-direction: column;
+    }
+  }
+}

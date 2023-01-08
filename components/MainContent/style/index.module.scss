@@ -8,3 +8,13 @@
   max-height: 100vh;
   overflow-y: scroll;
 }
+
+@media (max-width: 550px) {
+  .mainContent {
+    height: auto;
+    max-height: unset;
+    overflow-y: unset;
+    padding: 20px 10px;
+    padding-bottom: 80px;
+  }
+}

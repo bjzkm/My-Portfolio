@@ -15,7 +15,7 @@ export default function Skills() {
       <h3 className={classes.title}>Skills</h3>
       <p className={classes.descriptions}>
         Wasn&apos;t sure what the best way to present my skill-set was as I didn&apos;t
-        want to list a bunch of buzz words here. <br />
+        want to list a bunch of buzz words here.
         So I will just list some of the tools and frameworks I&apos;m currently
         using:
       </p>

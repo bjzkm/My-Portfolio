@@ -22,15 +22,3 @@ a {
 ul {
   list-style: none;
 }
-
-.body {
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow: scroll;
-  flex-wrap: wrap;
-}
-
-.test {
-  display: flex;
-  scroll-snap-align: start;
-}

@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "../styles/global.scss";
 import type { AppProps } from "next/app";
 import { ElementOffsetProvider } from "../context/ElementOffsetContext";
 

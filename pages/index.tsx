@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import MainContent from "../components/MainContent";
 import Sidebar from "../components/Sidebar";
 import useElementOffsetContext from "../context/ElementOffsetContext";
+import classes from '../styles/index.module.scss';
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null)
@@ -27,9 +28,9 @@ export default function Home() {
         <meta property="twitter:description" content="My name is Zin Kyaw Moe, a full stack web developer from myanmar who have experience of 2 years in a web development." />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main ref={mainRef} className="body">
+      <main ref={mainRef} className={classes.body}>
         <Header />
-        <div className="test">
+        <div className={classes.container}>
           <Sidebar />
           <MainContent />
         </div>

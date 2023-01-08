@@ -21,8 +21,8 @@ export default function Header() {
         ${classes.downloadCvButton}
         ${activeElement !== "home" && classes.small}
       `}>
-        <span>Download&nbsp;</span>
-        <span>CV</span>
+        <span>Download CV</span>
+        <img src="/icons/cv-icon.svg" alt="icon" />
       </a>
       <a href="mailto: zinkyawmoe.bj@gmail.com" className={classes.contactMeButton}>Contact Me</a>
     </div>
