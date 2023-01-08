@@ -77,6 +77,25 @@
 
           a {
             font-weight: 600;
+            position: relative;
+
+            .pointerIcon {
+              position: absolute;
+              bottom: -20px;
+              right: -30px;
+              animation: pointing 0.9s alternate infinite;
+              border-radius: 50%;
+            }
+
+            @keyframes pointing {
+              0% {
+                transform: scale(1);
+              }
+              100% {
+                box-shadow: 0 0 10px 1px rgb(236, 234, 234);
+                transform: scale(1.3);
+              }
+            }
           }
         }
       }

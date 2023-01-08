@@ -74,7 +74,12 @@ export default function Experiences() {
 
             <p className={classes.experienceDescriptions}>
               Don’t waste you time, just click the link and email me now. 
-              <a href="mailto: zinkyawmoe.bj@gmail.com"> zinkyawmoe.bj@gmail.com</a>
+              
+              <a href="mailto: zinkyawmoe.bj@gmail.com"> 
+                &nbsp;zinkyawmoe.bj@gmail.com
+                <img className={classes.pointerIcon} src="/icons/pointer-icon.svg" alt="icon" />
+              </a>
+              
             </p>
             <br />
           </div>
