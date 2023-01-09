@@ -22,6 +22,12 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .sidebarFooter {
+    height: 90px;
+  }
+}
+
 @media (max-width: 900px) {
   .sidebarFooter {
     height: 70px;

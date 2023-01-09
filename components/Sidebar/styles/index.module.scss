@@ -39,17 +39,19 @@
   }
 
   .navigationListWrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 106px;
+    width: 100%;
+    height: calc(100vh - (106px + 413.5px + 30px + 45px));
 
     .navigationList {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: calc(100vh - (106px + 413px + 45px));
+      justify-content: center;
       overflow: scroll;
       width: 100%;
-      padding: 30px 0;
+      height: 100%;
 
       .navigationListItem {
         span {
@@ -77,37 +79,48 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1440px) {
   .sidebar {
-    width: 280px;
+    padding-top: 30px;
 
     .profile {
       .avatar {
         width: 220px;
         height: 220px;
-  
+
         img {
           width: 100%;
           height: 100%;
         }
       }
-
+  
       .title {
         margin-top: 15px;
+        font-size: 28px;
       }
   
       .info {
         margin-top: 5px;
       }
+
     }
+  
+    .navigationListWrapper {
+      margin-top: 20px;
+      margin-bottom: 106px;
+      height: calc(100vh - (90px + 312px + 20px + 30px));
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    padding-top: 45px;
+    width: 280px;
 
     .navigationListWrapper {
-      .navigationList {
-        height: calc(100vh - (70px + 343px + 45px));
-        justify-content: center;
-      }
+      height: calc(100vh - (70px + 343px + 20px + 45px));
     }
-
   }
 }
 
