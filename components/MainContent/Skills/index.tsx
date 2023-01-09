@@ -3,7 +3,7 @@ import useElementOffsetContext from "../../../context/ElementOffsetContext";
 import classes from "./style/index.module.scss";
 
 export default function Skills() {
-  const skillsRef = useRef<HTMLInputElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
   const { setSkillsOffset } = useElementOffsetContext();
 
   useLayoutEffect(() => {

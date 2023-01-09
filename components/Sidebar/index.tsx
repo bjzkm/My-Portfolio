@@ -4,7 +4,7 @@ import SidebarFooter from "./SidebarFooter";
 import classes from "./styles/index.module.scss";
 
 export default function Sidebar() {
-  const { homeOffset, aboutMeOffset, skillsOffset, experiencesOffset, scrollToOffset, activeElement } = useElementOffsetContext();
+  const { homeOffset, aboutMeOffset, skillsOffset, experiencesOffset, projectsOffset, scrollToOffset, activeElement } = useElementOffsetContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -36,6 +36,7 @@ export default function Sidebar() {
               setIsMenuOpen(false)
             }}>Home</span>
           </li>
+
           <li className={`
             ${classes.navigationListItem}
             ${activeElement === "aboutMe" && classes.active}
@@ -45,6 +46,7 @@ export default function Sidebar() {
               setIsMenuOpen(false)
             }}>About Me</span>
           </li>
+
           <li className={`
             ${classes.navigationListItem}
             ${activeElement === "skills" && classes.active}
@@ -54,6 +56,7 @@ export default function Sidebar() {
               setIsMenuOpen(false)
             }}>Skills</span>
           </li>
+
           <li className={`
             ${classes.navigationListItem}
             ${activeElement === "experiences" && classes.active}
@@ -62,6 +65,16 @@ export default function Sidebar() {
               scrollToOffset(experiencesOffset, "secondary")
               setIsMenuOpen(false)
             }}>Experiences</span>
+          </li>
+
+          <li className={`
+            ${classes.navigationListItem}
+            ${activeElement === "projects" && classes.active}
+          `}>
+            <span onClick={() => {
+              scrollToOffset(projectsOffset, "secondary")
+              setIsMenuOpen(false)
+            }}>Projects</span>
           </li>
         </ul>
 

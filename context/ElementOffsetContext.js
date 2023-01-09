@@ -17,10 +17,12 @@ const ElementOffsetContext = createContext({
   skillsOffset: 0,
   experiencesOffset: 0,
   activeElement: "home",
+  projectsOffset: 0,
   setHomeOffset: (homeOffset) => {},
   setAboutMeOffset: (aboutMeOffset) => {},
   setSkillsOffset: (skillsOffset) => {},
   setExperiencesOffset: (experiencesOffset) => {},
+  setProjectsOffset: (projectOffset) => {},
   setMainContainer: (elementRef) => {},
   scrollToOffset: (offset, containerType) => {},
 });
@@ -30,6 +32,7 @@ export function ElementOffsetProvider(props) {
   const [aboutMeOffset, setAboutMeOffset] = useState(0);
   const [skillsOffset, setSkillsOffset] = useState(0);
   const [experiencesOffset, setExperiencesOffset] = useState(0);
+  const [projectsOffset, setProjectsOffset] = useState(0);
   const [containers, setContainers] = useState({});
   const [activeElement, setActiveElement] = useState("home");
 
@@ -38,11 +41,13 @@ export function ElementOffsetProvider(props) {
     aboutMeOffset,
     skillsOffset,
     experiencesOffset,
+    projectsOffset,
     activeElement,
     setHomeOffset,
     setAboutMeOffset,
     setSkillsOffset,
     setExperiencesOffset,
+    setProjectsOffset,
     setMainContainer,
     scrollToOffset,
   };
@@ -91,7 +96,7 @@ export function ElementOffsetProvider(props) {
             if (containers["secondary"]) {
               function setActive() {
                 let result = getNearest(
-                  [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset],
+                  [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset, projectsOffset],
                   containers["secondary"].scrollTop +
                     containers["secondary"].offsetTop +
                     25
@@ -106,6 +111,9 @@ export function ElementOffsetProvider(props) {
                     break;
                   case experiencesOffset:
                     setActiveElement("experiences");
+                    break;
+                  case projectsOffset:
+                    setActiveElement("projects");
                     break;
                   default:
                     setActiveElement("home");
@@ -122,7 +130,7 @@ export function ElementOffsetProvider(props) {
     } else {
       function setActive() {
         let result = getNearest(
-          [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset],window.scrollY
+          [homeOffset, aboutMeOffset, skillsOffset, experiencesOffset, projectsOffset],window.scrollY
         );
 
         switch (result) {
@@ -134,6 +142,9 @@ export function ElementOffsetProvider(props) {
             break;
           case experiencesOffset:
             setActiveElement("experiences");
+            break;
+          case projectsOffset:
+            setActiveElement("projects");
             break;
           default:
             setActiveElement("home");

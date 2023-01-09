@@ -3,7 +3,7 @@ import useElementOffsetContext from "../../context/ElementOffsetContext";
 import classes from "./styles/index.module.scss";
 
 export default function Header() {
-  const homeRef = useRef<HTMLInputElement>(null);
+  const homeRef = useRef<HTMLDivElement>(null);
   const { setHomeOffset, activeElement} = useElementOffsetContext();
 
   useLayoutEffect(() => {
