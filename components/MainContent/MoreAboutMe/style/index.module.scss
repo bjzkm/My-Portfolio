@@ -1,0 +1,46 @@
+.moreAboutMe {
+  margin-top: 40px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .descriptions {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .detailList {
+    margin-top: 10px;
+    list-style: disc;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .moreAboutMe {
+    .title {
+      text-align: center;
+    }
+
+    .descriptions {
+      text-align: center;
+      font-size: 16px;
+      line-height: 23px;
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    .detailList {
+      margin-left: 25px;
+
+      li {
+      font-size: 15px;
+
+      }
+    }
+  }
+}

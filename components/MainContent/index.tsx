@@ -3,6 +3,7 @@ import useElementOffsetContext from "../../context/ElementOffsetContext";
 import AboutMe from "./AboutMe";
 import CollaborationProjects from "./CollaborationProjects";
 import Experiences from "./Experiences";
+import MoreAboutMe from "./MoreAboutMe";
 import Skills from "./Skills";
 import classes from "./style/index.module.scss";
 
@@ -20,6 +21,7 @@ export default function MainContent() {
       <Skills />
       <Experiences />
       <CollaborationProjects />
+      <MoreAboutMe />
     </main>
   );
 }
