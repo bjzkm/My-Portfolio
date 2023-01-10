@@ -17,7 +17,7 @@ export default function Header() {
     </h1>
 
     <div className={classes.actionButtons}>
-      <a href="#" className={`
+      <a href="/zinkyawmoe-bj-cv.pdf" target="_blank" rel="noreferrer" className={`
         ${classes.downloadCvButton}
         ${activeElement !== "home" && classes.small}
       `}>

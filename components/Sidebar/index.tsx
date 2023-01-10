@@ -12,7 +12,7 @@ export default function Sidebar() {
       <div className={classes.profile}>
         <div className={classes.avatar}>
           <img src="/images/avatar.png" alt="avatar-image"></img>
-          <a href="#" className={classes.downloadCvButton}>
+          <a href="/zinkyawmoe-bj-cv.pdf" target="_blank" rel="noreferrer" className={classes.downloadCvButton}>
             <img src="/icons/cv-icon.svg" alt="icon" />
           </a>
         </div>
