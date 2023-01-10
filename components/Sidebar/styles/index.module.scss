@@ -40,28 +40,40 @@
 
   .navigationListWrapper {
     margin-top: 30px;
-    margin-bottom: 106px;
+    margin-bottom: 110px;
     width: 100%;
-    height: calc(100vh - (106px + 413.5px + 30px + 45px));
+    height: calc(100vh - (90px + 413.5px + 30px + 45px));
+    align-items: center;
+    padding-left: 145px;
 
     .navigationList {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      justify-self: center;
       overflow: scroll;
       width: 100%;
       height: 100%;
 
       .navigationListItem {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        flex-shrink: 0;
+
         span {
           font-size: 18px;
           font-weight: 600;
           cursor: pointer;
+          margin-left: 15px;
         }
 
-        &:not(:first-child) {
-          margin-top: 50px;
+        img {
+          width: 22px;
+          height: 22px;
+
+          &:first-child {
+            margin-top: -2px;
+          }
         }
 
         &.active {
@@ -119,7 +131,8 @@
     width: 280px;
 
     .navigationListWrapper {
-      height: calc(100vh - (70px + 343px + 20px + 45px));
+      height: calc(100vh - (70px + 340px + 20px + 45px));
+      padding-left: 75px;
     }
   }
 }
@@ -183,6 +196,7 @@
       right: 0;
       margin: 0;
       transition: all 0.4s ease-in-out;
+      padding: 0;
 
       .navigationList {
         display: none;
@@ -213,10 +227,17 @@
           flex-direction: column;
 
           .navigationListItem {
+            height: 90px;
+            
             span {
               font-size: 25px;
               color: #ffffff;
             }
+
+            img {
+              display: none;
+            }
+
             &.active {
               span {
                 color: var(--primary-text-color);

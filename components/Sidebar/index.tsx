@@ -31,6 +31,7 @@ export default function Sidebar() {
             ${classes.navigationListItem}
             ${activeElement === "home" && classes.active}
           `}>
+            <img src="/icons/home-icon.svg" alt="icon" />
             <span onClick={() => {
               scrollToOffset(homeOffset)
               setIsMenuOpen(false)
@@ -41,6 +42,7 @@ export default function Sidebar() {
             ${classes.navigationListItem}
             ${activeElement === "aboutMe" && classes.active}
           `}>
+            <img src="/icons/about-me-icon.svg" alt="icon" />
             <span onClick={() => {
               scrollToOffset(aboutMeOffset, "secondary")
               setIsMenuOpen(false)
@@ -51,6 +53,7 @@ export default function Sidebar() {
             ${classes.navigationListItem}
             ${activeElement === "skills" && classes.active}
           `}>
+            <img src="/icons/skill-icon.svg" alt="icon" />
             <span onClick={() => {
               scrollToOffset(skillsOffset, "secondary")
               setIsMenuOpen(false)
@@ -61,6 +64,7 @@ export default function Sidebar() {
             ${classes.navigationListItem}
             ${activeElement === "experiences" && classes.active}
           `}>
+            <img src="/icons/experience-icon-2.svg" alt="icon" />
             <span onClick={() => {
               scrollToOffset(experiencesOffset, "secondary")
               setIsMenuOpen(false)
@@ -71,6 +75,7 @@ export default function Sidebar() {
             ${classes.navigationListItem}
             ${activeElement === "projects" && classes.active}
           `}>
+            <img src="/icons/project-icon.svg" alt="icon" />
             <span onClick={() => {
               scrollToOffset(projectsOffset, "secondary")
               setIsMenuOpen(false)

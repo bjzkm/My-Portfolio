@@ -98,7 +98,7 @@ export default function Experiences() {
             </h2>
 
             <p className={classes.experienceDescriptions}>
-              Don&apos;t waste you time, just click the link and email me now. 
+              Don&apos;t waste your time, just click the link and email me now. 
               
               <a href="mailto: zinkyawmoe.bj@gmail.com"> 
                 &nbsp;zinkyawmoe.bj@gmail.com

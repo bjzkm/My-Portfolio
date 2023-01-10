@@ -1,5 +1,5 @@
 .sidebarFooter {
-  height: 106px;
+  height: 90px;
   background-color: #FAE8E8;
   width: 100%;
   position: absolute;
@@ -19,12 +19,6 @@
       height: 40px;
       cursor: pointer;
     }
-  }
-}
-
-@media (max-width: 1440px) {
-  .sidebarFooter {
-    height: 90px;
   }
 }
 
